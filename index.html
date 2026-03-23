@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LUNETA</title>
+    <link rel="icon" href="./artes/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/config.css">
+    <link rel="stylesheet" href="./css/anima.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+    <div class="logo close hidden" id="logo_menu">
+        <img src="./artes/etiqueta.png" alt="logo Luneta">
+    </div>
+    
+    <header>
+        <div class="cabecalho">
+            <div>
+                <img src="./artes/lunetaLogo01.png" alt="Logo Luneta" class="direita">
+            </div>
+            <div>
+                <img src="./artes/apresentacao.png" alt="NASCIDA E CRIADA NA UEMG(UNIVERSIDADE DO ESTADO DE MINAS GERAIS), SOMOS A 1ª AGÊNCIA DE PUBLICIDADE, PROPAGANDA E MARKENTING BASEADA EM ECONOMIA SOLIDÁRIA" class="esquerda">
+            </div>
+        </div>
+    </header>
+    <main style="background-color: #000;">
+        <nav class="menuConteudo">
+            <ol>
+                <li><a href="#Jupiter">Júpiter</a></li>
+                <li><a href="#Saturno">Saturno</a></li>
+                <li><a href="#Marte">Marte</a></li>
+                <li><a href="#Lua">Selene</a></li>
+                <li><a href="#Terra">Terra</a></li>
+                <li><a href="#" onmousemove="alert('Em breve: site ofical da Luneta TV.')"><img src="./artes/lunetaTV_logo.png" alt="logo luneta tv"></a></li>
+            </ol>
+        </nav>
+
+        <div id="modal">
+           
+        </div>
+
+        <div class="marquee" id="marquee_home">
+            <span>Para quem enxerga além!</span>
+            <span>Para quem enxerga além!</span>
+            <span>Para quem enxerga além!</span>
+            <span>Para quem enxerga além!</span>
+            <span>Para quem enxerga além!</span>
+            <span>Para quem enxerga além!</span>
+            <span>Para quem enxerga além!</span>
+            <span>Para quem enxerga além!</span>
+            <span>Para quem enxerga além!</span>
+            <span>Para quem enxerga além!</span>
+            <span>Para quem enxerga além!</span>
+            <span>Para quem enxerga além!</span>
+        </div>
+        <section id="universo">
+            <div class="gravidade" id="Jupiter">
+                <div class="planetas marginD" onclick="modal(4)">
+                    <img src="./artes/bandeiraJupiter.png"class="bandeira cordenada00" style="margin-bottom: -150px;">
+                    <img src="./artes/Jupiter.png" alt="Planeta Saturno"  style="max-width: 80%; min-width: 600px; rotate: 55deg;">
+                </div>
+            </div>
+
+            <div class="gravidade" id="Saturno" >
+                <div class="planetas marginD" onclick="modal(1)" style="margin-top: -100px; margin-bottom: -200px; margin-left: -200px;">
+                    <img src="./artes/bandeiraSaturno.png"class="bandeira cordenada01">
+                    <img src="./artes/saturno.png" alt="Planeta Saturno"  style="max-width: 100%; min-width: 800px;">
+                </div>
+            </div>
+
+            <div class="gravidade" style="margin-top: 100px;" id="Marte">
+                <div class="planetas marginE" onclick="modal(2)">
+                    <img src="./artes/bandeiraMarte.png"class="bandeira cordenada02">
+                    <img src="./artes/marte.png" alt="Planeta Marte" style="width: 330px;">
+                </div> 
+            </div>
+    
+            <div class="gravidade" id="Lua">
+                <div class="planetas" onclick="modal(3)">
+                    <img src="./artes/bandeiraLua.png"class="bandeira cordenada03">
+                    <img src="./artes/lua.png" alt="Lua" style="width: 300px; rotate: -15deg;">
+                </div>
+            </div>
+
+            <div class="gravidade" id="Terra"> 
+                <div class="planetas" onclick="modal(5)">
+                    <img src="./artes/bandeiraTerra.png"class="bandeira cordenada04">
+                    <img src="./artes/terra.png" alt="Planeta Terra" style="max-width: 100%; min-width: 450px; margin-bottom: -100px;">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Botão Flutuante do WhatsApp -->
+     <div class="WhatsBtn">
+        <a href="https://wa.me/5511999999999">
+            <img src="./artes/whast.png" alt="WhatsApp">
+        </a>
+     </div>
+
+    <footer>
+        <div id="social">
+            <ul>
+                <li>
+                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-facebook-square"></i>
+                    </a>
+                </li>
+            </ul>
+        </div> 
+    </footer>
+</body>
+<script src="./js/modal.js"></script>
+<script src="./js/fadeIn_scroll.js"></script>
+<script src="./js/menu_burguer.js"></script>
+</html>

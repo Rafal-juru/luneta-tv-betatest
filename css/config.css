@@ -1,0 +1,85 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');*/
+
+@font-face {
+    font-family: 'Agrandir';
+    src:
+    url('../fonts/Agrandir-WideBlackItalic.otf') format('opentype'),
+    /* --> Não pode ter varias fontes ao mesmo tempo porque ele buga, sem saber qual delas ele vai usar.
+
+    url('../fonts/Agrandir-GrandLight.otf') format('opentype'),
+    url('../fonts/Agrandir-Narrow.otf') format('opentype'),
+    url('../fonts/Agrandir-GrandHeavy.otf') format('opentype'),
+    url('../fonts/Agrandir-TextBold.otf') format('opentype'),
+    url('../fonts/Agrandir-ThinItalic.otf') format('opentype'),
+    url('../fonts/Agrandir-WideBlackItalic.otf') format('opentype'),
+    url('../fonts/Agrandir-WideLight.otf') format('opentype');
+    url('../fonts/Agrandir-Regular.otf') format('opentype')
+    font-weight: normal;
+    font-style: normal;
+    */
+    /*
+    Tipos de format()
+    - opentype (otf)
+    - truetype (ttf)
+    - embedded-opentype
+    - truetype-att (Apple Advanced Typography)
+    - svg
+*/
+}
+@font-face {
+    font-family: 'AgrandirBold';
+    src: url('../fonts/Agrandir-TextBold.otf') format('opentype'),
+}
+@font-face {
+    font-family: 'AgrandirNarrow';
+    src: url('../fonts/Agrandir-Narrow.otf') format('opentype'),
+}
+html {
+    scroll-behavior: smooth;
+    background-color: #000;
+}
+:root{
+    --font-ligth:#f5f5f5;
+    --font-black:#000;
+    --back-ligth:#1fc78c;
+    --back-black:#0074c1;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: block;
+    overflow-x: hidden;
+    width: 100%;
+    height: auto;
+}
+.stopBody{
+    overflow-y: hidden;
+}
+button{
+    background: none;
+    border: none;
+}
+a{
+    text-decoration: none;
+    color: var(--font-ligth);
+}
+ol, ul{
+    list-style: none;
+}
+.hidden {
+    display: none;
+}
+.visible {
+    display: flex;
+    animation: slideUp 2s ease;
+}
+.open{
+    display: flex;
+    animation: fadeIn 1s ease;
+}
+.close{
+    animation: slideClose 1s ease forwards;
+}

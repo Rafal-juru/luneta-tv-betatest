@@ -1,0 +1,16 @@
+footer{
+    width: 100vw;
+    height: 50px;
+    background-color: var(--back-black);
+    color: var(--font-ligth);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-top: 200px;
+}
+#social ul{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}

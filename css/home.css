@@ -1,0 +1,253 @@
+.logo{
+    position: fixed;
+    top: 0px;
+    text-align: center;
+    width: 100px;
+    z-index: 2;
+}
+.logo img{
+    width: 150px;
+}
+header{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 400px;
+    background-color: #fff;
+}
+.cabecalho{
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+.cabecalho div{
+    width: 50%;
+    text-align: center;
+}
+.cabecalho .direita{
+    margin-top: -30px;
+    width: 70%;
+    max-width: 600px;
+    margin-left: -200px;
+}
+.cabecalho .esquerda{
+    width: 130%;
+    margin-left: -250px;
+}
+main{
+    width: 100vw;
+}
+main nav{
+    width: 100%;
+    height: 60px;
+    display: block;
+    background-color: var(--back-black);
+    font-family: "Agrandir", sans-serif;
+}
+main nav ol{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+main nav ol li a{
+    color: var(--font-ligth);
+    font-size: 1.2rem;
+    justify-items: center;
+    align-items: center;
+}
+main nav ol li a img{
+    width: 60px;
+    margin-top: 7px;
+}
+.marquee {
+    position: sticky;
+    top: 5px;
+    font-family: "Agrandir", sans-serif;
+    align-items: center;
+    justify-items: center;
+    padding-top: 5px;
+    margin-top: 20px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background-color: var(--back-ligth);
+    z-index: 1;
+}
+.marquee span {
+    display: inline-block;
+    animation: marquee 30s linear infinite;
+    margin-right: 20px;
+    color: var(--font-ligth);
+}
+#universo{
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 200px;
+    gap: 200px;
+}
+.gravidade{
+    display: block;
+    position: relative;
+    width: 80%;
+    height: 500px;
+    height: auto;
+    justify-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+.marginE{
+    margin-right: -100px;
+}
+.marginD{
+    margin-right: 100px;
+}
+.planetas img{
+    cursor: pointer;
+    object-fit: cover;
+}
+.bandeira{
+    position: absolute;
+}
+/*Bandeira Jupiter*/
+.cordenada00{
+    width: 710px;
+    rotate: -20deg;
+    translate: 150px ;
+    margin-left: -20px;
+    margin-top: -5px;
+}
+/*Bandeira Saturno*/
+.cordenada01{
+    width: 800px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+/*Bandeira Marte*/
+.cordenada02{
+    width: 645px;
+    margin-top: -230px;
+    margin-left: -100px;
+}
+/*Bandeira Lua*/
+.cordenada03{
+    width: 550px;
+    margin-left: -90px;
+    margin-top: -120px;
+}
+/*Bandeira Terra*/
+.cordenada04{
+    width: 750px;
+    rotate: -290deg;
+    margin-top: -100px;
+    margin-left: -120px;
+}
+.WhatsBtn{
+    position:fixed;
+    bottom:0;
+    right:0;
+    border-radius: 50%;
+    border: 1px greenyellow;
+    margin: 30px;
+    animation: pulsar 1.5s infinite;
+    z-index: 1;
+}
+.WhatsBtn img{
+    max-width: 60px;
+}
+
+@media (max-width: 800px) {
+    .logo img{
+        width: 100px;
+    }
+    header{
+        height: 200px;
+    }
+    .cabecalho{
+        height: 100%;
+        width: 100%;
+    }
+    .cabecalho .direita{
+        margin-top: -20px;
+        width: 70%;
+        margin-left: -80px;
+    }
+    .cabecalho .esquerda{
+        width: 130%;
+        margin-left: -100px;
+    }
+    main nav{
+       height: 45px;
+    }
+    main nav ol li a{
+        font-size: 0.7rem;
+    }
+    main nav ol li a img{
+        width: 40px;
+        margin-top: 6px;
+    }
+    .marquee{
+        padding-top: 2px;
+    }
+    .marquee span {
+        font-size: 0.7rem;
+    }
+    #universo{ 
+        padding: 100px;
+        gap: 100px;
+    }
+    /*Jupiter*/
+    .cordenada00{
+        width: 580px;
+        rotate: -30deg;
+        margin: auto;
+        margin-top: -10px;
+    }
+    
+    /* Jupiter Mobile Ajustado */
+   /* .cordenada00 {*/
+        /* width: 520px;         Reduzimos o tamanho da imagem da bandeira */
+        /*rotate: -22deg;      /* Aumentamos levemente a rotação para fechar a curva no planeta menor */
+        /*translate: 90px 0px; /* Reduzimos o translate para manter o texto próximo ao topo */
+        /*margin-left: -30px;
+        margin-top: -10px;
+        margin-bottom: -100px; /* Ajuste para não criar um buraco branco embaixo */
+    /*} */
+
+
+    /*Saturno*/
+    .cordenada01{
+        width: 600px;
+        margin-left: 160px;
+        margin-top: 160px;
+    }
+    /*Marte*/
+    .cordenada02{
+        width: 640px;
+        margin-left: -100px;
+        margin-top: -220px;
+    }
+    .cordenada03{
+        width: 590px;
+        margin-left: -110px;
+        margin-top: -130px;
+    }
+    /*Terra*/
+    .cordenada04{
+        width: 620px;
+        rotate: -20deg;
+        margin-top: -80px;
+        margin-left: -80px;
+    }
+}
