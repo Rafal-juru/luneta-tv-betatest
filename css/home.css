@@ -207,24 +207,16 @@ main nav ol li a img{
         padding: 100px;
         gap: 100px;
     }
+   
     /*Jupiter*/
-    .cordenada00{
-        width: 580px;
-        rotate: -30deg;
-        margin: auto;
-        margin-top: -10px;
-    }
-    
-    /* Jupiter Mobile Ajustado */
-   /* .cordenada00 {*/
-        /* width: 520px;         Reduzimos o tamanho da imagem da bandeira */
-        /*rotate: -22deg;      /* Aumentamos levemente a rotação para fechar a curva no planeta menor */
-        /*translate: 90px 0px; /* Reduzimos o translate para manter o texto próximo ao topo */
-        /*margin-left: -30px;
-        margin-top: -10px;
-        margin-bottom: -100px; /* Ajuste para não criar um buraco branco embaixo */
-    /*} */
-
+    .cordenada00 {
+        width: 520px;        
+        rotate: -22deg;      
+        translate: 90px 0px;
+        margin-left: -20px;
+        margin-top: 2px;
+        margin-bottom: -100px; 
+    } 
 
     /*Saturno*/
     .cordenada01{
@@ -234,9 +226,10 @@ main nav ol li a img{
     }
     /*Marte*/
     .cordenada02{
-        width: 640px;
-        margin-left: -100px;
-        margin-top: -220px;
+        width: 600px;
+        rotate: -55deg;
+        margin-left: -160px;
+        margin-top: -230px;
     }
     .cordenada03{
         width: 590px;
@@ -246,8 +239,8 @@ main nav ol li a img{
     /*Terra*/
     .cordenada04{
         width: 620px;
-        rotate: -20deg;
-        margin-top: -80px;
+        rotate: -10deg;
+        margin-top: -100px;
         margin-left: -80px;
     }
 }
