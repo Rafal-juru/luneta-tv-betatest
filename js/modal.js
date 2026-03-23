@@ -38,6 +38,11 @@ const CONTEUDO_PLANETAS = [
 ];
 
 const modal = (numID = 0) => {
+
+  const body = document.querySelector('body');
+  body.style.overflow = 'auto'; // Garante que o scroll esteja ativo
+  body.style.height = 'auto';
+
   // Seleciona o elemento:
   const container = document.getElementById('modal');
 

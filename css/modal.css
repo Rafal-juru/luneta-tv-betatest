@@ -1,14 +1,17 @@
 #modal {
-    display: none; /* Mantemos o display none para o JS controlar */
+    display: none;
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background-color: #000000c7;
     top: 0;
+    left: 0;
     z-index: 4;
-    overflow: hidden; /* Importante para não vazar o conteúdo antes de abrir */
+    background-color: transparent; /* Removemos o fundo preto */
     
-    /* Configuração da Fenda */
+    /* REMOVIDO: overflow: hidden; */
+    /* ADICIONADO: Permite que o scroll "passe" pelo container */
+    overflow: visible; 
+    
     align-items: center;
     justify-content: center;
 }
@@ -66,7 +69,9 @@
     height: 500px;
     margin: auto;
     border: solid 2px #fff;
-    
+    position: relative; 
+    background-color: #fff;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
     /* ESTADO INICIAL DA FENDA: Cortado ao meio horizontalmente */
     clip-path: inset(50% 0 50% 0);
     opacity: 0;
@@ -80,6 +85,8 @@
 
 #modal .conteudo .white {
     padding-top: 0 20px;
+    pointer-events: auto;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
     width: 0;
     font-family: 'AgrandirNarrow', sans-serif;
     font-size: 18px;
