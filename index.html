@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/config.css">
     <link rel="stylesheet" href="./css/anima.css">
-    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/accordion.css">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/footer.css">
 </head>
@@ -39,9 +39,7 @@
             </ol>
         </nav>
 
-        <div id="modal">
-           
-        </div>
+
 
         <div class="marquee" id="marquee_home">
             <span>Para quem enxerga além!</span>
@@ -59,37 +57,100 @@
         </div>
         <section id="universo">
             <div class="gravidade" id="Jupiter">
-                <div class="planetas marginD" onclick="modal(4)">
+                <div class="planetas marginD" onclick="toggleAccordion('Jupiter')">
                     <img src="./artes/bandeiraJupiter.png"class="bandeira cordenada00" style="margin-bottom: -150px;">
                     <img src="./artes/Jupiter.png" alt="Planeta Saturno"  style="max-width: 80%; min-width: 600px; rotate: 55deg;">
+                </div>
+                <div class="painel-expansivel" id="painel-Jupiter">
+                    <div class="painel-header">Júpiter</div>
+                    <div class="painel-content">
+                        <div class="col-texto">
+                            <p>Júpiter é o maior planeta do nosso sistema solar, formado principalmente por gás e tempestades. Uma delas dura há mais de 300 anos: a Grande Mancha Vermelha — aquela mesma que você reparou na atmosfera magnífica do astro.</p>
+                            <p>Júpiter representa <span class="blue">autoridade e sabedoria.</span> Por isso, foi o escolhido para simbolizar as <span class="green">coproduções de infoprodutos</span> da Luneta com uma galera que ama tanto o que faz que decidiu ensinar os outros por meio de seus cursos.</p>
+                            <p>Acreditamos que sabedoria precisa ser compartilhada — e a paixão dos nossos clientes nos inspira!</p>
+                        </div>
+                        <div class="col-imagem">
+                            <img src="./artes/fundo_jupiter.webp" alt="Arte Júpiter">
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="gravidade" id="Saturno" >
-                <div class="planetas marginD" onclick="modal(1)" style="margin-top: -100px; margin-bottom: -200px; margin-left: -200px;">
+                <div class="planetas marginD" onclick="toggleAccordion('Saturno')" style="margin-top: -100px; margin-bottom: -200px; margin-left: -200px;">
                     <img src="./artes/bandeiraSaturno.png"class="bandeira cordenada01">
                     <img src="./artes/saturno.png" alt="Planeta Saturno"  style="max-width: 100%; min-width: 800px;">
+                </div>
+                <div class="painel-expansivel" id="painel-Saturno">
+                    <div class="painel-header">Saturno</div>
+                    <div class="painel-content">
+                        <div class="col-texto">
+                            <p>Saturno é o segundo maior planeta do nosso sistema solar e carrega seu anel icônico feito de gelo e poeira.</p>
+                            <p>O gigante gasoso e tempestuoso foi o escolhido pela Luneta para representar o setor de Markenting e Comunicação para <span class="green">empresas públicas ou projetos advindos de recursos públicos</span>, pois uma responsa dessas requer <span class="blue">disciplina, estrutura, responsabilidade e limites</span>, que é justamente o que o planeta representa.</p>
+                            <p>Apesar das tempestades terríveis, a visita foi agradável.</p>
+                        </div>
+                        <div class="col-imagem">
+                            <img src="./artes/arte novo pc aterrisagem em Saturno em WebP.webp" alt="Arte Saturno">
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="gravidade" style="margin-top: 100px;" id="Marte">
-                <div class="planetas marginE" onclick="modal(2)">
+                <div class="planetas marginE" onclick="toggleAccordion('Marte')">
                     <img src="./artes/bandeiraMarte.png"class="bandeira cordenada02">
                     <img src="./artes/marte.png" alt="Planeta Marte" style="width: 330px;">
                 </div> 
+                <div class="painel-expansivel" id="painel-Marte">
+                    <div class="painel-header">Marte</div>
+                    <div class="painel-content">
+                        <div class="col-texto">
+                            <p>Nosso vizinho Marte representa <span class="blue">desejo, coragem, ação, ímpeto, força e poder</span> e foi o escolhido para guiar os nossos <span class="green">clientes da Política</span>.</p>
+                            <p>Marte é o deus romano da guerra e, vai por mim, precisamos dessa energia pra enfrentar as infinitas batalhas em campanhas políticas.</p>
+                            <p>E não é à toa que ele é vermelho, não! Assim como todos os nossos clientes, estes, em especial, são progressistas e entram no jogo político com objetivos de equidade e justiça socioambiental.</p>
+                        </div>
+                        <div class="col-imagem">
+                            <img src="./artes/Luneta comunicações - arte PC de aterrisagem em Marte em WebP.webp" alt="Arte Marte">
+                        </div>
+                    </div>
+                </div>
             </div>
     
             <div class="gravidade" id="Lua">
-                <div class="planetas" onclick="modal(3)">
+                <div class="planetas" onclick="toggleAccordion('Lua')">
                     <img src="./artes/bandeiraLua.png"class="bandeira cordenada03">
                     <img src="./artes/lua.png" alt="Lua" style="width: 300px; rotate: -15deg;">
+                </div>
+                <div class="painel-expansivel" id="painel-Lua">
+                    <div class="painel-header">Selene</div>
+                    <div class="painel-content">
+                        <div class="col-texto">
+                            <p>Sabia que o nome da nossa lua é Selene? A deusa grega em sua carruagem prateada, velando nosso planetinha azul todas as noites, o que deu a ela o arquétipo de uma grande mãe. Selene representa <span class="blue">renovação, mistério, sonhos, desejos e amor eterno</span> e foi em homenagem a ela que a Luneta nasceu com sonhos sociais e coletivos pra lá de ambiciosos.</p>
+                            <p><span class="green">Somos uma agência cooperativista baseada em Economia Solidária</span>. Todo lucro é dividido equitativamente e todos os profissionais podem se ver em seus trabalhos e participam dele do começo ao fim. Nosso jornal independente e profissional, a Luneta TV, foca em dar voz aos mais silenciados e promover o <span class="green">Jornalismo ativista em prol de um mundo mais justo</span>.</p>
+                        </div>
+                        <div class="col-imagem">
+                            <img src="./artes/fundo_lua.webp" alt="Arte Lua">
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="gravidade" id="Terra"> 
-                <div class="planetas" onclick="modal(5)">
+                <div class="planetas" onclick="toggleAccordion('Terra')">
                     <img src="./artes/bandeiraTerra.png"class="bandeira cordenada04">
                     <img src="./artes/terra.png" alt="Planeta Terra" style="max-width: 100%; min-width: 450px; margin-bottom: -100px;">
+                </div>
+                <div class="painel-expansivel" id="painel-Terra">
+                    <div class="painel-header">Terra</div>
+                    <div class="painel-content">
+                        <div class="col-texto">
+                            <p>Na <span class="blue">UEMG (Universidade do Estado de Minas Gerais)</span>, unidade Passos, foi estudada e criada a Luneta. A Terra tem um dos recursos mais valiosos e raros do universo: a <span class="green">vida!</span> E, com ela, possibilidades inimagináveis. Entretanto, o seleto grupo orgânico e racional que a habita acabou se organizando de forma bastante hierárquica e desigual.</p>
+                            <p>Acreditamos que as Ciências e a cooperação são algumas das soluções para repensarmos a forma de existirmos. E, no que tange ao nosso trabalho, prestamos serviços de <span class="blue">jornalismo, publicidade, propaganda e marketing</span> de forma justa, criativa e com compromisso social - sempre em busca de conexões com quem também <span class="green">enxerga além</span>.</p>
+                        </div>
+                        <div class="col-imagem">
+                            <img src="./artes/fundo_terra.webp" alt="Arte Terra">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -120,7 +181,7 @@
         </div> 
     </footer>
 </body>
-<script src="./js/modal.js"></script>
+<script src="./js/accordion.js"></script>
 <script src="./js/fadeIn_scroll.js"></script>
 <script src="./js/menu_burguer.js"></script>
 </html>

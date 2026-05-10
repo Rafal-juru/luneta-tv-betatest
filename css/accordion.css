@@ -1,0 +1,118 @@
+/* accordion.css */
+
+.gravidade {
+    position: relative;
+    /* Adicionado para garantir o contexto de z-index */
+}
+
+.planetas {
+    position: relative;
+    z-index: 10; /* Z-index maior para sobrepor o painel */
+    cursor: pointer;
+}
+
+.painel-expansivel {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease-in-out, margin-top 0.8s ease-in-out;
+    margin-top: -200px; /* Margem negativa ainda maior para se esconder bem sob o planeta */
+    position: relative;
+    z-index: 1; /* Z-index menor para ficar abaixo do planeta */
+    background-color: #fff;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+.painel-expansivel.ativo {
+    max-height: 2000px; /* Altura máxima grande o suficiente para o conteúdo */
+    opacity: 1;
+    margin-top: -140px; /* Sobe bastante para que o PNG do planeta sobreponha o painel de forma mais evidente */
+    margin-bottom: 50px;
+}
+
+.painel-header {
+    background-color: #000;
+    color: #fff;
+    text-align: right;
+    padding: 15px 30px;
+    font-family: 'AgrandirBold', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.painel-content {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+}
+
+.col-texto {
+    flex: 1;
+    padding: 60px 80px; /* Aumenta as margens internas para "centralizar" mais o bloco de texto */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.col-texto .faixa-tag {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.col-texto p {
+    font-family: 'Agrandir', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.col-texto .blue {
+    color: #0b6fa5;
+    font-family: 'AgrandirBold', sans-serif;
+}
+
+.col-texto .green {
+    color: #00be7f;
+    font-family: 'AgrandirBold', sans-serif;
+}
+
+.col-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Encosta a imagem mais para o lado direito */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 40px; /* Garante a MESMA distância exata do topo, baixo e direita */
+}
+
+.col-imagem img {
+    max-width: 90%;
+    max-height: 500px; /* Limite de altura para não ficar gigante no desktop */
+    object-fit: contain; /* Mantém a proporção sem cortar */
+    display: block;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .painel-content {
+        flex-direction: column;
+    }
+    
+    .col-imagem {
+        justify-content: center;
+    }
+    
+    .col-imagem img {
+        width: 100%;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    
+    .painel-expansivel.ativo {
+        margin-top: -10px;
+    }
+}
