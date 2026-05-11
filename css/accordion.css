@@ -7,7 +7,8 @@
 
 .planetas {
     position: relative;
-    z-index: 10; /* Z-index maior para sobrepor o painel */
+    z-index: 10;
+    /* Z-index maior para sobrepor o painel */
     cursor: pointer;
 }
 
@@ -16,9 +17,11 @@
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease-in-out, margin-top 0.8s ease-in-out;
-    margin-top: -200px; /* Margem negativa ainda maior para se esconder bem sob o planeta */
+    margin-top: -200px;
+    /* Margem negativa ainda maior para se esconder bem sob o planeta */
     position: relative;
-    z-index: 1; /* Z-index menor para ficar abaixo do planeta */
+    z-index: 1;
+    /* Z-index menor para ficar abaixo do planeta */
     background-color: #fff;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
@@ -26,9 +29,11 @@
 }
 
 .painel-expansivel.ativo {
-    max-height: 2000px; /* Altura máxima grande o suficiente para o conteúdo */
+    max-height: 2000px;
+    /* Altura máxima grande o suficiente para o conteúdo */
     opacity: 1;
-    margin-top: -140px; /* Sobe bastante para que o PNG do planeta sobreponha o painel de forma mais evidente */
+    margin-top: -140px;
+    /* Sobe bastante para que o PNG do planeta sobreponha o painel de forma mais evidente */
     margin-bottom: 50px;
 }
 
@@ -47,11 +52,14 @@
     background-color: #fff;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    padding: 40px 5%;
+    gap: 5%;
 }
 
 .col-texto {
     flex: 1;
-    padding: 60px 80px; /* Aumenta as margens internas para "centralizar" mais o bloco de texto */
+    padding: 0;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -64,9 +72,10 @@
 }
 
 .col-texto p {
-    font-family: 'Agrandir', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    font-weight: 400;
     margin-bottom: 15px;
     color: #333;
 }
@@ -82,18 +91,46 @@
 }
 
 .col-imagem {
-    flex: 1;
+    flex: 0 0 22%;
+    max-width: 350px;
+    height: 500px;
     display: flex;
-    justify-content: flex-end; /* Encosta a imagem mais para o lado direito */
-    align-items: center; /* Centraliza verticalmente */
-    padding: 40px; /* Garante a MESMA distância exata do topo, baixo e direita */
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: #fff;
 }
 
 .col-imagem img {
-    max-width: 90%;
-    max-height: 500px; /* Limite de altura para não ficar gigante no desktop */
-    object-fit: contain; /* Mantém a proporção sem cortar */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     display: block;
+}
+
+/* Ajustes Individuais de Sobreposição dos Painéis */
+#painel-Terra.ativo {
+    margin-top: -30px;
+    /* Empurra o painel mais para baixo, fazendo a Terra "subir" e diminuindo a sobreposição */
+}
+
+#painel-Saturno.ativo {
+    margin-top: -350px;
+    /* Puxa o painel ainda mais para cima para que Saturno desça mais sobre a janela */
+}
+
+#painel-Marte.ativo,
+#painel-Lua.ativo {
+    margin-top: -100px;
+    /* Puxa o painel mais para cima, fazendo os planetas "descerem" e aumentarem a sobreposição */
+}
+
+/* Espaçamento entre os Planetas */
+#Saturno,
+#Marte,
+#Lua,
+#Terra {
+    margin-top: 150px;
 }
 
 /* Responsividade */
@@ -101,17 +138,17 @@
     .painel-content {
         flex-direction: column;
     }
-    
+
     .col-imagem {
         justify-content: center;
     }
-    
+
     .col-imagem img {
         width: 100%;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
     }
-    
+
     .painel-expansivel.ativo {
         margin-top: -10px;
     }

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>LUNETA</title>
     <link rel="icon" href="./artes/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/config.css">
     <link rel="stylesheet" href="./css/anima.css">
@@ -57,7 +60,7 @@
         </div>
         <section id="universo">
             <div class="gravidade" id="Jupiter">
-                <div class="planetas marginD" onclick="toggleAccordion('Jupiter')">
+                <div class="planetas marginD" onclick="toggleAccordion(event, 'Jupiter')">
                     <img src="./artes/bandeiraJupiter.png"class="bandeira cordenada00" style="margin-bottom: -150px;">
                     <img src="./artes/Jupiter.png" alt="Planeta Saturno"  style="max-width: 80%; min-width: 600px; rotate: 55deg;">
                 </div>
@@ -70,14 +73,14 @@
                             <p>Acreditamos que sabedoria precisa ser compartilhada — e a paixão dos nossos clientes nos inspira!</p>
                         </div>
                         <div class="col-imagem">
-                            <img src="./artes/fundo_jupiter.webp" alt="Arte Júpiter">
+                            <img src="./artes/arte novo pc terra jupter.webp" alt="Arte Júpiter">
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="gravidade" id="Saturno" >
-                <div class="planetas marginD" onclick="toggleAccordion('Saturno')" style="margin-top: -100px; margin-bottom: -200px; margin-left: -200px;">
+                <div class="planetas marginD" onclick="toggleAccordion(event, 'Saturno')" style="margin-bottom: -200px; margin-left: -200px;">
                     <img src="./artes/bandeiraSaturno.png"class="bandeira cordenada01">
                     <img src="./artes/saturno.png" alt="Planeta Saturno"  style="max-width: 100%; min-width: 800px;">
                 </div>
@@ -96,8 +99,8 @@
                 </div>
             </div>
 
-            <div class="gravidade" style="margin-top: 100px;" id="Marte">
-                <div class="planetas marginE" onclick="toggleAccordion('Marte')">
+            <div class="gravidade" id="Marte">
+                <div class="planetas marginE" onclick="toggleAccordion(event, 'Marte')">
                     <img src="./artes/bandeiraMarte.png"class="bandeira cordenada02">
                     <img src="./artes/marte.png" alt="Planeta Marte" style="width: 330px;">
                 </div> 
@@ -110,14 +113,14 @@
                             <p>E não é à toa que ele é vermelho, não! Assim como todos os nossos clientes, estes, em especial, são progressistas e entram no jogo político com objetivos de equidade e justiça socioambiental.</p>
                         </div>
                         <div class="col-imagem">
-                            <img src="./artes/Luneta comunicações - arte PC de aterrisagem em Marte em WebP.webp" alt="Arte Marte">
+                            <img src="./artes/arte novo pc aterrisagem em Marte em WebP.webp" alt="Arte Marte">
                         </div>
                     </div>
                 </div>
             </div>
     
             <div class="gravidade" id="Lua">
-                <div class="planetas" onclick="toggleAccordion('Lua')">
+                <div class="planetas" onclick="toggleAccordion(event, 'Lua')">
                     <img src="./artes/bandeiraLua.png"class="bandeira cordenada03">
                     <img src="./artes/lua.png" alt="Lua" style="width: 300px; rotate: -15deg;">
                 </div>
@@ -129,14 +132,14 @@
                             <p><span class="green">Somos uma agência cooperativista baseada em Economia Solidária</span>. Todo lucro é dividido equitativamente e todos os profissionais podem se ver em seus trabalhos e participam dele do começo ao fim. Nosso jornal independente e profissional, a Luneta TV, foca em dar voz aos mais silenciados e promover o <span class="green">Jornalismo ativista em prol de um mundo mais justo</span>.</p>
                         </div>
                         <div class="col-imagem">
-                            <img src="./artes/fundo_lua.webp" alt="Arte Lua">
+                            <img src="./artes/arte novo pc aterrisagem em Selene em WebP.webp" alt="Arte Lua">
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="gravidade" id="Terra"> 
-                <div class="planetas" onclick="toggleAccordion('Terra')">
+                <div class="planetas" onclick="toggleAccordion(event, 'Terra')">
                     <img src="./artes/bandeiraTerra.png"class="bandeira cordenada04">
                     <img src="./artes/terra.png" alt="Planeta Terra" style="max-width: 100%; min-width: 450px; margin-bottom: -100px;">
                 </div>
@@ -148,7 +151,7 @@
                             <p>Acreditamos que as Ciências e a cooperação são algumas das soluções para repensarmos a forma de existirmos. E, no que tange ao nosso trabalho, prestamos serviços de <span class="blue">jornalismo, publicidade, propaganda e marketing</span> de forma justa, criativa e com compromisso social - sempre em busca de conexões com quem também <span class="green">enxerga além</span>.</p>
                         </div>
                         <div class="col-imagem">
-                            <img src="./artes/fundo_terra.webp" alt="Arte Terra">
+                            <img src="./artes/arte novo pc terra.webp" alt="Arte Terra">
                         </div>
                     </div>
                 </div>
